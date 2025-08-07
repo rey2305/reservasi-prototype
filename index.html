@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title> Reservasi Bengkel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  .none{
+    visibility: hidden;
+  }
+  .tombol{
+    background-color: #020024;
+    color: white;
+
+  }
+  </style>
+</head>
+<body>
+
+<h2> Reservasi Bengkel</h2>
+
+<form action="https://formspree.io/f/mvgqvkok" method="POST">
+  <label for="nama">Nama pemilik kendaraan:</label>
+  <input type="text" id="nama" name="nama" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="telepon">Nomor Telepon:</label>
+  <input type="tel" id="telepon" name="telepon" required>
+
+  <label for="kendaraan">Jenis Kendaraan:</label>
+  <textarea name="jenis mobil" id="kendaraan"></textarea>
+
+  <label for="tanggal">Tanggal Reservasi:</label>
+  <input type="date" id="tanggal" name="tanggal" required>
+
+  <label for="pesan">Keluhan / Permintaan Khusus:</label>
+  <textarea id="pesan" name="pesan" rows="4" placeholder="Contoh: body lecet,cat pudar dll"></textarea>
+
+  <button type="submit">Kirim Reservasi</button>
+<div class="none">tidak terlihat</div>
+  <button type="submit" class="tombol" > <a href="https://maps.app.goo.gl/BP4sBUMTEGff1bRQ8">KLIK UNTUK LOKASI KAMI</a></button>
+
+</form>
+
+</body>
+</html>
