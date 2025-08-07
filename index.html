@@ -2,82 +2,126 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title> Reservasi Bengkel</title>
+  <title>Reservasi Bengkel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #f1f1f1;
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("black-background-digital-art-simple-red-wallpaper-preview.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
+
     h2 {
       text-align: center;
+      margin-top: 40px;
+      text-shadow: 2px 2px 4px #000;
     }
+
     form {
       max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      animation: fadeIn 1.2s ease-out;
     }
+
     input, select, textarea {
       width: 100%;
-      padding: 10px;
-      margin: 8px 0 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
     }
+
     button {
-      background-color: #4CAF50;
+      background-color: #e60000;
       color: white;
       border: none;
-      padding: 12px;
+      padding: 14px;
       width: 100%;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    button:hover {
-      background-color: #45a049;
-    }
-  .none{
-    visibility: hidden;
-  }
-  .tombol{
-    background-color: #020024;
-    color: white;
 
-  }
+    button:hover {
+      background-color: #ff1a1a;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .none {
+      visibility: hidden;
+    }
+
+    .tombol {
+      background-color: #020024;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
-<h2> Reservasi Bengkel</h2>
+  <h2>Reservasi Bengkel</h2>
 
-<form action="https://formspree.io/f/mvgqvkok" method="POST">
-  <label for="nama">Nama pemilik kendaraan:</label>
-  <input type="text" id="nama" name="nama" required>
+  <form action="https://formspree.io/f/mvgqvkok" method="POST">
+    <label for="nama">Nama pemilik kendaraan:</label>
+    <input type="text" id="nama" name="nama" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-  <label for="telepon">Nomor Telepon:</label>
-  <input type="tel" id="telepon" name="telepon" required>
+    <label for="telepon">Nomor Telepon:</label>
+    <input type="tel" id="telepon" name="telepon" required>
 
-  <label for="kendaraan">Jenis Kendaraan:</label>
-  <textarea name="jenis mobil" id="kendaraan"></textarea>
+    <label for="kendaraan">Jenis Kendaraan:</label>
+    <textarea name="jenis mobil" id="kendaraan"></textarea>
 
-  <label for="tanggal">Tanggal Reservasi:</label>
-  <input type="date" id="tanggal" name="tanggal" required>
+    <label for="tanggal">Tanggal Reservasi:</label>
+    <input type="date" id="tanggal" name="tanggal" required>
 
-  <label for="pesan">Keluhan / Permintaan Khusus:</label>
-  <textarea id="pesan" name="pesan" rows="4" placeholder="Contoh: body lecet,cat pudar dll"></textarea>
+    <label for="pesan">Keluhan / Permintaan Khusus:</label>
+    <textarea id="pesan" name="pesan" rows="4" placeholder="Contoh: body lecet, cat pudar, dll"></textarea>
 
-  <button type="submit">Kirim Reservasi</button>
-<div class="none">tidak terlihat</div>
-  <button type="submit" class="tombol" > <a href="https://maps.app.goo.gl/BP4sBUMTEGff1bRQ8">KLIK UNTUK LOKASI KAMI</a></button>
+    <button type="submit">Kirim Reservasi</button>
 
-</form>
+    <div class="none">tidak terlihat</div>
+
+    <button type="button" class="tombol">
+      <a href="https://maps.app.goo.gl/BP4sBUMTEGff1bRQ8" target="_blank">KLIK UNTUK LOKASI KAMI</a>
+    </button>
+  </form>
+
+  <!-- JavaScript Animasi Interaktif Ringan -->
+  <script>
+    document.querySelectorAll("input, textarea").forEach(el => {
+      el.addEventListener("focus", () => {
+        el.style.backgroundColor = "#fff0f0";
+      });
+      el.addEventListener("blur", () => {
+        el.style.backgroundColor = "#fff";
+      });
+    });
+  </script>
 
 </body>
 </html>
